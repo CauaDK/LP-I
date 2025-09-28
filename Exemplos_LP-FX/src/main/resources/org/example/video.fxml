@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.Integer?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import java.lang.String?>
+<HBox alignment="CENTER" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.VideoController">
+    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER">
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="200" />
+                <ColumnConstraints minWidth="200" />
+                <ColumnConstraints minWidth="200" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+
+            <!-- Sessão Arma -->
+            <TitledPane expanded="true" text="Arma" GridPane.rowIndex="1">
+                <VBox spacing="10">
+                    <TextField fx:id="armaModelo" promptText="Modelo" />
+                    <TextField fx:id="armaComprimento" promptText="Comprimento" />
+                    <TextField fx:id="armaAlcance" promptText="Alcance" />
+                    <Button onAction="#criarArma" text="Criar Arma" />
+                </VBox>
+            </TitledPane>
+
+            <!-- Sessão Monstro -->
+            <TitledPane expanded="true" text="Monstro" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <VBox spacing="10">
+                    <TextField fx:id="monstroNome" promptText="Nome" />
+                    <TextField fx:id="monstroTamanho" promptText="Tamanho" />
+                    <ComboBox fx:id="monstroPerigo" prefWidth="150.0" promptText="Perigo">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <Integer fx:value="1" />
+                                <Integer fx:value="2" />
+                                <Integer fx:value="3" />
+                                <Integer fx:value="4" />
+                                <Integer fx:value="5" />
+                                <Integer fx:value="6" />
+                                <Integer fx:value="7" />
+                                <Integer fx:value="8" />
+                                <Integer fx:value="9" />
+                                <Integer fx:value="10" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Button onAction="#criarMonstro" text="Criar Monstro" />
+                </VBox>
+            </TitledPane>
+
+            <!-- Sessão Via -->
+            <TitledPane expanded="true" text="Via" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <VBox spacing="10">
+                    <ComboBox fx:id="viaTipo" prefWidth="150.0" promptText="Tipo">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Estrada" />
+                                <String fx:value="Rodovia" />
+                                <String fx:value="Local" />
+                                <String fx:value="Coletora" />
+                                <String fx:value="Arterial" />
+                                <String fx:value="Transito Rapido" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <TextField fx:id="viaComprimento" promptText="Comprimento" />
+                    <CheckBox fx:id="viaPaviamento" text="Paviamento" />
+                    <Button onAction="#criarVia" text="Criar Via" />
+                </VBox>
+            </TitledPane>
+            <Button mnemonicParsing="false" onAction="#voltar" text="VOLTAR" GridPane.columnSpan="3">
+                <padding>
+                    <Insets bottom="3.0" left="15.0" right="15.0" top="3.0" />
+                </padding>
+            </Button>
+            <padding>
+                <Insets left="30.0" right="30.0" />
+            </padding>
+        </GridPane>
+    </ScrollPane>
+</HBox>
