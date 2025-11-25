@@ -29,7 +29,7 @@
                 <VBox spacing="10">
                     <TextField fx:id="animalEspecie" promptText="Especie" />
                     <TextField fx:id="animalIdade" promptText="Idade" />
-                    <TextField fx:id="animalPeso" promptText="Peso" />
+                    <TextField fx:id="animalPeso" promptText="Peso kg" />
                     <Button onAction="#criarAnimal" text="Criar Animal" />
                 </VBox>
             </TitledPane>
@@ -37,7 +37,7 @@
             <!-- Sessão Imovel -->
             <TitledPane expanded="true" text="Imovel" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="imovelTamanho" promptText="Tamanho" />
+                    <TextField fx:id="imovelTamanho" promptText="Tamanho metro" />
                     <TextField fx:id="imovelEndereco" promptText="Endereco" />
                     <TextField fx:id="imovelCor" promptText="Cor" />
                     <Button onAction="#criarImovel" text="Criar Imovel" />
@@ -49,7 +49,7 @@
                 <VBox spacing="10">
                     <TextField fx:id="veiculoModelo" promptText="Modelo" />
                     <TextField fx:id="veiculoCor" promptText="Cor" />
-                    <TextField fx:id="veiculoVelocidade" promptText="MaxVelocidade" />
+                    <TextField fx:id="veiculoVelocidade" promptText="MaxVelocidade km/h" />
                     <Button onAction="#criarVeiculo" text="Criar Veiculo" />
                 </VBox>
             </TitledPane>

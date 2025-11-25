@@ -30,8 +30,8 @@
             <!-- Sessão Estrela -->
             <TitledPane expanded="true" text="Estrela" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="musicaTemperatura" promptText="Temperatura" />
-                    <TextField fx:id="musicaMassa" promptText="Massa" />
+                    <TextField fx:id="musicaTemperatura" promptText="Temperatura celsius" />
+                    <TextField fx:id="musicaMassa" promptText="Massa kg" />
                     <TextField fx:id="musicaIdade" promptText="Idade" />
                     <Button onAction="#criarEstrela" text="Criar Estrela" />
                 </VBox>
@@ -40,8 +40,8 @@
             <!-- Sessão Minerio -->
             <TitledPane expanded="true" text="Minerio" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="minerioDureza" promptText="Dureza" />
-                    <TextField fx:id="minerioPureza" promptText="Pureza" />
+                    <TextField fx:id="minerioDureza" promptText="Dureza 1 a 10" />
+                    <TextField fx:id="minerioPureza" promptText="Pureza 1 a 10" />
                     <ComboBox fx:id="minerioRaridade" prefWidth="150.0" promptText="Raridade">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
@@ -59,7 +59,7 @@
             <!-- Sessão Roupa -->
             <TitledPane expanded="true" text="Roupa" GridPane.columnIndex="2" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="roupaTamanho" promptText="Tamanho" />
+                    <TextField fx:id="roupaTamanho" promptText="Tamanho metro" />
                     <TextField fx:id="roupaCor" promptText="Cor" />
                     <TextField fx:id="roupaTecido" promptText="Tecido" />
                     <Button onAction="#criarRoupa" text="Criar Roupa" />

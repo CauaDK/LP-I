@@ -28,9 +28,9 @@
             <!-- Sessão Mala -->
             <TitledPane expanded="true" text="Mala" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="malaCapacidade" promptText="Capacidade" />
+                    <TextField fx:id="malaCapacidade" promptText="Capacidade kg" />
                     <TextField fx:id="malaMaterial" promptText="Material" />
-                    <TextField fx:id="malaPeso" promptText="Peso" />
+                    <TextField fx:id="malaPeso" promptText="Peso kg" />
                     <Button onAction="#criarMala" text="Criar Mala" />
                 </VBox>
             </TitledPane>
@@ -38,8 +38,8 @@
             <!-- Sessão Pessoa -->
             <TitledPane expanded="true" text="Pessoa" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="pessoaAltura" promptText="Altura" />
-                    <TextField fx:id="pessoaPeso" promptText="Peso" />
+                    <TextField fx:id="pessoaAltura" promptText="Altura metro" />
+                    <TextField fx:id="pessoaPeso" promptText="Peso kg" />
                     <TextField fx:id="pessoaSexo" promptText="Sexo" />
                     <Button onAction="#criarPessoa" text="Criar Pessoa" />
                 </VBox>
@@ -48,7 +48,7 @@
             <!-- Sessão Planta -->
             <TitledPane expanded="true" text="Planta" GridPane.columnIndex="2" GridPane.rowIndex="1">
                 <VBox spacing="10">
-                    <TextField fx:id="plantaTamanho" promptText="Tamanho" />
+                    <TextField fx:id="plantaTamanho" promptText="Tamanho metro" />
                     <TextField fx:id="plantaCor" promptText="Cor" />
                     <CheckBox fx:id="plantaCortada" text="Cortada" />
                     <Button onAction="#criarPlanta" text="Criar Planta" />

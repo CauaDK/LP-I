@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.controller.MusicaController" spacing="15" alignment="CENTER" prefWidth="600" prefHeight="600">
+    <Label text="BANCO DE DADOS - MUSICA"/>
+
+    <TitledPane text="Estrela" maxWidth="400">
+        <VBox spacing="5">
+            <TextField fx:id="txtTemperatura" promptText="Temperatura"/>
+            <TextField fx:id="txtMassa" promptText="Massa"/>
+            <TextField fx:id="txtIdade" promptText="Idade"/>
+            <Button text="Adicionar" fx:id="btnEstrela" onAction="#adicionar"/>
+        </VBox>
+    </TitledPane>
+
+    <TitledPane text="Minério" maxWidth="400">
+        <VBox spacing="5">
+            <TextField fx:id="txtDureza" promptText="Dureza"/>
+            <TextField fx:id="txtPureza" promptText="Pureza"/>
+            <ComboBox fx:id="txtRaridade" prefWidth="150.0" promptText="Raridade">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Muito Raro" />
+                        <String fx:value="Raro" />
+                        <String fx:value="Comum" />
+                        <String fx:value="Lixo" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Button text="Adicionar" fx:id="btnMinerio" onAction="#adicionar"/>
+        </VBox>
+    </TitledPane>
+
+    <TitledPane text="Roupa" maxWidth="400">
+        <VBox spacing="5">
+            <TextField fx:id="txtTamanho" promptText="Tamanho"/>
+            <TextField fx:id="txtCor" promptText="Cor"/>
+            <TextField fx:id="txtTecido" promptText="Tecido"/>
+            <Button text="Adicionar" fx:id="btnRoupa" onAction="#adicionar"/>
+        </VBox>
+    </TitledPane>
+
+    <HBox spacing="10">
+<!--        <Button text="Atualizar" onAction="#atualizar"/>-->
+<!--        <Button text="Excluir" onAction="#excluir"/>-->
+    </HBox>
+</VBox>

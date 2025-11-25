@@ -44,7 +44,7 @@
             <TitledPane expanded="true" text="Monstro" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <VBox spacing="10">
                     <TextField fx:id="monstroNome" promptText="Nome" />
-                    <TextField fx:id="monstroTamanho" promptText="Tamanho" />
+                    <TextField fx:id="monstroTamanho" promptText="Tamanho metro" />
                     <ComboBox fx:id="monstroPerigo" prefWidth="150.0" promptText="Perigo">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
@@ -80,7 +80,7 @@
                             </FXCollections>
                         </items>
                     </ComboBox>
-                    <TextField fx:id="viaComprimento" promptText="Comprimento" />
+                    <TextField fx:id="viaComprimento" promptText="Comprimento km" />
                     <CheckBox fx:id="viaPaviamento" text="Paviamento" />
                     <Button onAction="#criarVia" text="Criar Via" />
                 </VBox>

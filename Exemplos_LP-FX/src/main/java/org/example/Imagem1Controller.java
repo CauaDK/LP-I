@@ -48,6 +48,9 @@ public class Imagem1Controller {
                 String strClass = mala.getCapacidade() + "," + mala.getMaterial() + "," + mala.getPeso();
                 csv.salvarCSV(strClass, "mala", folder);
                 report.alerta(strClass + " foi criada com sucesso");
+                malaCapacidade.clear();
+                malaMaterial.clear();
+                malaPeso.clear();
             } catch (NumberFormatException e) {
                 report.mostrarErro("Preencha os campos da Mala corretamente!");
             }
