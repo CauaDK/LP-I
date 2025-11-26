@@ -4,47 +4,63 @@
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.controller.MusicaController" spacing="15" alignment="CENTER" prefWidth="600" prefHeight="600">
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.controller.MusicaController" spacing="15" alignment="CENTER" prefWidth="900" prefHeight="600">
     <Label text="BANCO DE DADOS - MUSICA"/>
 
-    <TitledPane text="Estrela" maxWidth="400">
-        <VBox spacing="5">
-            <TextField fx:id="txtTemperatura" promptText="Temperatura"/>
-            <TextField fx:id="txtMassa" promptText="Massa"/>
-            <TextField fx:id="txtIdade" promptText="Idade"/>
-            <Button text="Adicionar" fx:id="btnEstrela" onAction="#adicionar"/>
-        </VBox>
-    </TitledPane>
+    <HBox spacing="10" alignment="CENTER">
+        <TitledPane text="Estrela" maxWidth="400">
+            <VBox spacing="5">
+                <TextField fx:id="txtIdEstrela" promptText="ID"/>
+                <TextField fx:id="txtTemperatura" promptText="Temperatura"/>
+                <TextField fx:id="txtMassa" promptText="Massa"/>
+                <TextField fx:id="txtIdade" promptText="Idade"/>
+                <HBox spacing="5">
+                    <Button text="Adicionar" fx:id="btnEstrelaA" onAction="#adicionar"/>
+                    <Button text="Deletar" fx:id="btnEstrelaD" onAction="#deletar"/>
+                    <Button text="Atualizar" fx:id="btnEstrelaU" onAction="#atualizar"/>
+                    <Button text="Mostrar" fx:id="btnEstrelaS" onAction="#seletar"/>
+                </HBox>
+            </VBox>
+        </TitledPane>
 
-    <TitledPane text="Minério" maxWidth="400">
-        <VBox spacing="5">
-            <TextField fx:id="txtDureza" promptText="Dureza"/>
-            <TextField fx:id="txtPureza" promptText="Pureza"/>
-            <ComboBox fx:id="txtRaridade" prefWidth="150.0" promptText="Raridade">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Muito Raro" />
-                        <String fx:value="Raro" />
-                        <String fx:value="Comum" />
-                        <String fx:value="Lixo" />
-                    </FXCollections>
-                </items>
-            </ComboBox>
-            <Button text="Adicionar" fx:id="btnMinerio" onAction="#adicionar"/>
-        </VBox>
-    </TitledPane>
+        <TitledPane text="Minério" maxWidth="400">
+            <VBox spacing="5">
+                <TextField fx:id="txtIdMinerio" promptText="ID"/>
+                <TextField fx:id="txtDureza" promptText="Dureza"/>
+                <TextField fx:id="txtPureza" promptText="Pureza"/>
+                <ComboBox fx:id="txtRaridade" prefWidth="150.0" promptText="Raridade">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Muito Raro" />
+                            <String fx:value="Raro" />
+                            <String fx:value="Comum" />
+                            <String fx:value="Lixo" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <HBox spacing="5">
+                    <Button text="Adicionar" fx:id="btnMinerioA" onAction="#adicionar"/>
+                    <Button text="Deletar" fx:id="btnMinerioD" onAction="#deletar"/>
+                    <Button text="Atualizar" fx:id="btnMinerioU" onAction="#atualizar"/>
+                    <Button text="Mostrar" fx:id="btnMinerioS" onAction="#seletar"/>
+                </HBox>
+            </VBox>
+        </TitledPane>
 
-    <TitledPane text="Roupa" maxWidth="400">
-        <VBox spacing="5">
-            <TextField fx:id="txtTamanho" promptText="Tamanho"/>
-            <TextField fx:id="txtCor" promptText="Cor"/>
-            <TextField fx:id="txtTecido" promptText="Tecido"/>
-            <Button text="Adicionar" fx:id="btnRoupa" onAction="#adicionar"/>
-        </VBox>
-    </TitledPane>
-
-    <HBox spacing="10">
-<!--        <Button text="Atualizar" onAction="#atualizar"/>-->
-<!--        <Button text="Excluir" onAction="#excluir"/>-->
+        <TitledPane text="Roupa" maxWidth="400">
+            <VBox spacing="5">
+                <TextField fx:id="txtIdRoupa" promptText="ID"/>
+                <TextField fx:id="txtTamanho" promptText="Tamanho"/>
+                <TextField fx:id="txtCor" promptText="Cor"/>
+                <TextField fx:id="txtTecido" promptText="Tecido"/>
+                <HBox spacing="5">
+                    <Button text="Adicionar" fx:id="btnRoupaA" onAction="#adicionar"/>
+                    <Button text="Deletar" fx:id="btnRoupaD" onAction="#deletar"/>
+                    <Button text="Atualizar" fx:id="btnRoupaU" onAction="#atualizar"/>
+                    <Button text="Mostrar" fx:id="btnRoupaS" onAction="#seletar"/>
+                </HBox>
+            </VBox>
+        </TitledPane>
     </HBox>
+    <TextArea fx:id="areaResultado" prefWidth="800" prefHeight="200"/>
 </VBox>
